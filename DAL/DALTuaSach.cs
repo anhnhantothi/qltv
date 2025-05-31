@@ -160,5 +160,12 @@ namespace DAL
                 return false;
             }
         }
+        public bool IsTacGiaInUse(int idTacGia)
+        {
+            var tacgia = QLTVDb.Instance.TACGIAs.Find(idTacGia);
+            if (tacgia == null) return false;
+            return tacgia.TUASACHes != null && tacgia.TUASACHes.Any(); // nếu có tựa sách liên kết
+        }
+
     }
 }

@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.txtTenTL = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTuaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@
             this.MaTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDel = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tHELOAIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TheLoaiGrid)).BeginInit();
@@ -51,14 +51,14 @@
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.btnDel);
             this.topPanel.Controls.Add(this.butRefresh);
-            this.topPanel.Controls.Add(this.txtTenTL);
             this.topPanel.Controls.Add(this.butAdd);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1080, 121);
+            this.topPanel.Size = new System.Drawing.Size(1620, 189);
             this.topPanel.TabIndex = 0;
             // 
             // butRefresh
@@ -69,34 +69,13 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(378, 56);
+            this.butRefresh.Location = new System.Drawing.Point(661, 87);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(73, 65);
+            this.butRefresh.Size = new System.Drawing.Size(110, 102);
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
-            // 
-            // txtTenTL
-            // 
-            this.txtTenTL.BorderRadius = 6;
-            this.txtTenTL.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenTL.DefaultText = "";
-            this.txtTenTL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenTL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenTL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenTL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenTL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenTL.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.txtTenTL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenTL.Location = new System.Drawing.Point(9, 78);
-            this.txtTenTL.Margin = new System.Windows.Forms.Padding(5);
-            this.txtTenTL.Name = "txtTenTL";
-            this.txtTenTL.PasswordChar = '\0';
-            this.txtTenTL.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtTenTL.PlaceholderText = "Tên Thể Loại";
-            this.txtTenTL.SelectedText = "";
-            this.txtTenTL.Size = new System.Drawing.Size(179, 28);
-            this.txtTenTL.TabIndex = 10;
             // 
             // butAdd
             // 
@@ -106,15 +85,15 @@
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(212, 78);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Location = new System.Drawing.Point(42, 122);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(160, 28);
+            this.butAdd.Size = new System.Drawing.Size(278, 44);
             this.butAdd.TabIndex = 9;
             this.butAdd.Text = "Thêm Thể Loại";
             this.butAdd.TextOffset = new System.Drawing.Point(12, 0);
@@ -143,20 +122,20 @@
             this.TheLoaiGrid.AllowUserToAddRows = false;
             this.TheLoaiGrid.AllowUserToDeleteRows = false;
             this.TheLoaiGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.TheLoaiGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TheLoaiGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.TheLoaiGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TheLoaiGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.TheLoaiGrid.ColumnHeadersHeight = 35;
             this.TheLoaiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TheLoaiGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -164,28 +143,29 @@
             this.MaTheLoai,
             this.Ten,
             this.SoLuong});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TheLoaiGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.TheLoaiGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TheLoaiGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.TheLoaiGrid.Location = new System.Drawing.Point(0, 121);
+            this.TheLoaiGrid.Location = new System.Drawing.Point(0, 189);
+            this.TheLoaiGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TheLoaiGrid.Name = "TheLoaiGrid";
             this.TheLoaiGrid.ReadOnly = true;
             this.TheLoaiGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.TheLoaiGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TheLoaiGrid.RowHeadersVisible = false;
             this.TheLoaiGrid.RowHeadersWidth = 51;
             this.TheLoaiGrid.RowTemplate.Height = 30;
-            this.TheLoaiGrid.Size = new System.Drawing.Size(1080, 521);
+            this.TheLoaiGrid.Size = new System.Drawing.Size(1620, 814);
             this.TheLoaiGrid.TabIndex = 1;
             this.TheLoaiGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.TheLoaiGrid.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TheLoaiGrid.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TheLoaiGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.TheLoaiGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -193,7 +173,7 @@
             this.TheLoaiGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.TheLoaiGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.SlateBlue;
             this.TheLoaiGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.TheLoaiGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TheLoaiGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TheLoaiGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.TheLoaiGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.TheLoaiGrid.ThemeStyle.HeaderStyle.Height = 35;
@@ -236,15 +216,37 @@
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.ReadOnly = true;
             // 
+            // btnDel
+            // 
+            this.btnDel.BorderRadius = 6;
+            this.btnDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDel.FillColor = System.Drawing.Color.SlateBlue;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Image = global::GUI.Properties.Resources.close_icon;
+            this.btnDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDel.ImageOffset = new System.Drawing.Point(2, 0);
+            this.btnDel.Location = new System.Drawing.Point(375, 122);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(278, 44);
+            this.btnDel.TabIndex = 10;
+            this.btnDel.Text = "Xóa Thể Loại";
+            this.btnDel.TextOffset = new System.Drawing.Point(12, 0);
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
             // ucTheLoai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TheLoaiGrid);
             this.Controls.Add(this.topPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ucTheLoai";
-            this.Size = new System.Drawing.Size(1080, 642);
+            this.Size = new System.Drawing.Size(1620, 1003);
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tHELOAIBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TheLoaiGrid)).EndInit();
@@ -255,7 +257,6 @@
         #endregion
 
         private Siticone.Desktop.UI.WinForms.SiticonePanel topPanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtTenTL;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
 
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
@@ -267,5 +268,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnDel;
     }
 }

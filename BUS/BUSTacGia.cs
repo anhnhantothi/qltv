@@ -30,14 +30,30 @@ namespace BUS
             return (DALTacGia.Instance.AddTacGia(name));
              
         }
+        //public string DelTacGia(int id)
+        //{
+        //    TACGIA tg = DALTacGia.Instance.GetTacGiaById(id);
+        //    if (tg == null) return "Mã tác giả không hợp lệ ";
+        //    if (DALTacGia.Instance.DelTacGia(tg.id))
+        //        return "";
+        //    return "Khong the xoa tac gia";
+        //}
+
         public string DelTacGia(int id)
         {
             TACGIA tg = DALTacGia.Instance.GetTacGiaById(id);
-            if (tg == null) return "Mã tác giả không hợp lệ ";
-            if (DALTacGia.Instance.DelTacGia(tg.id))
+            if (tg == null) return "Mã tác giả không hợp lệ";
+
+            // Kiểm tra xem tác giả có đang được dùng trong bất kỳ tựa sách nào không
+            if (DALTuaSach.Instance.IsTacGiaInUse(id))
+                return "Tác giả đang được liên kết với tựa sách. Không thể xóa.";
+
+            if (DALTacGia.Instance.DelTacGia(id))
                 return "";
-            return "Khong the xoa tac gia";
+
+            return "Không thể xóa tác giả do lỗi hệ thống.";
         }
+
         public TACGIA GetTacGia(int id)
         {
             TACGIA tg;

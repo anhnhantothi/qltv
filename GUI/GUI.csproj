@@ -135,6 +135,12 @@
     <Compile Include="fChangePassword.Designer.cs">
       <DependentUpon>fChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDeleteTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDeleteTheLoai.Designer.cs">
+      <DependentUpon>fDeleteTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="fEditDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,12 @@
     </Compile>
     <Compile Include="fAddTheLoai.Designer.cs">
       <DependentUpon>fAddTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDeleteTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDeleteTacGia.Designer.cs">
+      <DependentUpon>fDeleteTacGia.cs</DependentUpon>
     </Compile>
     <Compile Include="fPhieuMuonSach.cs">
       <SubType>Form</SubType>
@@ -422,6 +434,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fChangePassword.resx">
       <DependentUpon>fChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDeleteTacGia.resx">
+      <DependentUpon>fDeleteTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDeleteTheLoai.resx">
+      <DependentUpon>fDeleteTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fEditDocGia.resx">
       <DependentUpon>fEditDocGia.cs</DependentUpon>
