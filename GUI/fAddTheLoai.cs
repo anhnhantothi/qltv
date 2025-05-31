@@ -33,9 +33,9 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 46);
+            this.label1.Location = new System.Drawing.Point(24, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.Size = new System.Drawing.Size(137, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên thể loại: ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -44,18 +44,18 @@ namespace GUI
             // 
             this.tenTheLoai.Location = new System.Drawing.Point(176, 46);
             this.tenTheLoai.Name = "tenTheLoai";
-            this.tenTheLoai.Size = new System.Drawing.Size(173, 22);
+            this.tenTheLoai.Size = new System.Drawing.Size(173, 31);
             this.tenTheLoai.TabIndex = 1;
             // 
             // btn_Luu
             // 
-            this.btn_Luu.Location = new System.Drawing.Point(140, 139);
+            this.btn_Luu.Location = new System.Drawing.Point(154, 116);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_Luu.Size = new System.Drawing.Size(75, 50);
             this.btn_Luu.TabIndex = 2;
             this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // fAddTheLoai
             // 

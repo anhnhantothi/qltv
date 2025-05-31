@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.deleteTacGia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.butRefresh = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.txtHoTen = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.butAdd = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tACGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TacGiaGrid = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
@@ -48,15 +48,38 @@
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.deleteTacGia);
             this.siticonePanel1.Controls.Add(this.butRefresh);
-            this.siticonePanel1.Controls.Add(this.txtHoTen);
             this.siticonePanel1.Controls.Add(this.butAdd);
             this.siticonePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
-            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(1037, 121);
+            this.siticonePanel1.Size = new System.Drawing.Size(1556, 189);
             this.siticonePanel1.TabIndex = 0;
+            // 
+            // deleteTacGia
+            // 
+            this.deleteTacGia.BorderRadius = 6;
+            this.deleteTacGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deleteTacGia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deleteTacGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.deleteTacGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deleteTacGia.FillColor = System.Drawing.Color.SlateBlue;
+            this.deleteTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteTacGia.ForeColor = System.Drawing.Color.White;
+            this.deleteTacGia.Image = global::GUI.Properties.Resources.close_icon;
+            this.deleteTacGia.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deleteTacGia.ImageOffset = new System.Drawing.Point(2, 0);
+            this.deleteTacGia.Location = new System.Drawing.Point(338, 116);
+            this.deleteTacGia.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.deleteTacGia.Name = "deleteTacGia";
+            this.deleteTacGia.Size = new System.Drawing.Size(249, 44);
+            this.deleteTacGia.TabIndex = 11;
+            this.deleteTacGia.Text = "Xóa Tác Giả";
+            this.deleteTacGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deleteTacGia.TextOffset = new System.Drawing.Point(3, 0);
+            this.deleteTacGia.Click += new System.EventHandler(this.deleteTacGia_Click);
             // 
             // butRefresh
             // 
@@ -66,34 +89,13 @@
             this.butRefresh.ImageOffset = new System.Drawing.Point(0, 0);
             this.butRefresh.ImageRotate = 0F;
             this.butRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.butRefresh.Location = new System.Drawing.Point(375, 56);
+            this.butRefresh.Location = new System.Drawing.Point(630, 87);
+            this.butRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butRefresh.Name = "butRefresh";
             this.butRefresh.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.butRefresh.Size = new System.Drawing.Size(75, 65);
+            this.butRefresh.Size = new System.Drawing.Size(112, 102);
             this.butRefresh.TabIndex = 9;
             this.butRefresh.Click += new System.EventHandler(this.butRefresh_Click);
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.BorderRadius = 5;
-            this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoTen.DefaultText = "";
-            this.txtHoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtHoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHoTen.Location = new System.Drawing.Point(12, 74);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(5);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.PasswordChar = '\0';
-            this.txtHoTen.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtHoTen.PlaceholderText = "Họ Tên Tác Giả";
-            this.txtHoTen.SelectedText = "";
-            this.txtHoTen.Size = new System.Drawing.Size(169, 28);
-            this.txtHoTen.TabIndex = 7;
             // 
             // butAdd
             // 
@@ -103,15 +105,15 @@
             this.butAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.butAdd.FillColor = System.Drawing.Color.SlateBlue;
-            this.butAdd.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAdd.ForeColor = System.Drawing.Color.White;
             this.butAdd.Image = global::GUI.Properties.Resources.Plus_icon;
             this.butAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.butAdd.ImageOffset = new System.Drawing.Point(2, 0);
-            this.butAdd.Location = new System.Drawing.Point(199, 74);
-            this.butAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.butAdd.Location = new System.Drawing.Point(32, 116);
+            this.butAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.butAdd.Name = "butAdd";
-            this.butAdd.Size = new System.Drawing.Size(156, 28);
+            this.butAdd.Size = new System.Drawing.Size(258, 44);
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "Thêm Tác Giả";
             this.butAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -128,7 +130,7 @@
             this.TacGiaGrid.AllowUserToDeleteRows = false;
             this.TacGiaGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -136,7 +138,7 @@
             this.TacGiaGrid.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -159,8 +161,8 @@
             this.TacGiaGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.TacGiaGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TacGiaGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.TacGiaGrid.Location = new System.Drawing.Point(0, 121);
-            this.TacGiaGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TacGiaGrid.Location = new System.Drawing.Point(0, 189);
+            this.TacGiaGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TacGiaGrid.Name = "TacGiaGrid";
             this.TacGiaGrid.ReadOnly = true;
             this.TacGiaGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -168,7 +170,7 @@
             this.TacGiaGrid.RowHeadersVisible = false;
             this.TacGiaGrid.RowHeadersWidth = 51;
             this.TacGiaGrid.RowTemplate.Height = 30;
-            this.TacGiaGrid.Size = new System.Drawing.Size(1037, 539);
+            this.TacGiaGrid.Size = new System.Drawing.Size(1556, 842);
             this.TacGiaGrid.TabIndex = 1;
             this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.TacGiaGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -218,17 +220,16 @@
             this.tenTacGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenTacGiaDataGridViewTextBoxColumn.Name = "tenTacGiaDataGridViewTextBoxColumn";
             this.tenTacGiaDataGridViewTextBoxColumn.ReadOnly = true;
-
             // 
             // ucTacGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TacGiaGrid);
             this.Controls.Add(this.siticonePanel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ucTacGia";
-            this.Size = new System.Drawing.Size(1037, 660);
+            this.Size = new System.Drawing.Size(1556, 1031);
             this.siticonePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TacGiaGrid)).EndInit();
@@ -242,10 +243,10 @@
         private System.Windows.Forms.BindingSource tACGIABindingSource;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView TacGiaGrid;
         private Siticone.Desktop.UI.WinForms.SiticoneButton butAdd;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtHoTen;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton butRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn mATACGIADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTacGiaDataGridViewTextBoxColumn;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton deleteTacGia;
     }
 }
