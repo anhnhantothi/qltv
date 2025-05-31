@@ -73,5 +73,16 @@ namespace GUI.UserControls
             f.ShowDialog();
             Binding();
         }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            using (var form = new fDeleteTheLoai())
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    Binding(); // cập nhật lại danh sách thể loại
+                }
+            }
+        }
     }
 }

@@ -91,12 +91,36 @@ namespace DAL
             }
         }
 
+        //public bool DelTheLoai(int id)
+        //{
+        //    try
+        //    {
+        //        var theloai = GetTheLoaiById(id);
+        //        if (theloai == null) return false;
+        //        QLTVDb.Instance.THELOAIs.Remove(theloai);
+        //        QLTVDb.Instance.SaveChanges();
+        //        return true;
+        //    }
+        //    catch
+        //    {
+        //        return false;
+        //    }
+        //}
         public bool DelTheLoai(int id)
         {
             try
             {
                 var theloai = GetTheLoaiById(id);
                 if (theloai == null) return false;
+
+                // Kiểm tra xem thể loại có đang được dùng bởi bất kỳ tựa sách nào không
+                bool isUsed = QLTVDb.Instance.TUASACHes.Any(ts => ts.THELOAI != null && ts.THELOAI.id == id);
+                if (isUsed)
+                {
+                    // Không thể xóa vì đang được dùng
+                    return false;
+                }
+
                 QLTVDb.Instance.THELOAIs.Remove(theloai);
                 QLTVDb.Instance.SaveChanges();
                 return true;

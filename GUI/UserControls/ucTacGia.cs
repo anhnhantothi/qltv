@@ -70,6 +70,25 @@ namespace GUI.UserControls
 
         }
 
-       
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteTacGia_Click(object sender, EventArgs e)
+        {
+            using (var form = new fDeleteTacGia())
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    Binding(); // cập nhật lại danh sách sau khi xóa
+                }
+            }
+        }
     }
 }
