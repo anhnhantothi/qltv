@@ -49,8 +49,8 @@ namespace GUI
             else
             {
                 MessageBox.Show("Thêm tác giả thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK; // Để form cha (ucTacGia) biết cần Binding lại
-                this.Close(); // Đóng form thêm
+                this.DialogResult = DialogResult.OK; 
+                this.Close();
             }
         }
 
